@@ -9,6 +9,22 @@
   <link rel="manifest" href="manifest.json" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <!--  Essential META Tags -->
+  <meta property="og:title" content="Tusina Fish">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./../src/assets/photo_2.jpg">
+  <meta property="og:url" content="https://tfish.eldesernauta.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--  Non-Essential, But Recommended -->
+  <meta property="og:description" content="Photography project deployed with React.JS">
+  <meta property="og:site_name" content="Tusina Fish">
+  <meta name="twitter:image:alt" content="Tusina Fish with Flowers">
+
+  <!--  Non-Essential, But Required for Analytics -->
+  <meta name="twitter:site" content="@eldesernauta">
+
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,10 +40,25 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <script src="https://kit.fontawesome.com/474486a965.js" crossorigin="anonymous"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TQDGGCP');</script>
+  <!-- End Google Tag Manager -->
   <title>T.Fish | eldesernauta</title>
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQDGGCP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--
