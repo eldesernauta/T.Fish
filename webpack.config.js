@@ -1,9 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-// terser removes console.logs
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = (env, argv) => {
     const { mode } = argv
@@ -87,31 +85,15 @@ module.exports = (env, argv) => {
                 filename: 'src/styles/[name].css',
                 chunkFilename: 'src/styles/[id].css'
             }),
-            new OptimizeCssAssetsPlugin({
-                assetNameRegExp: /\.optimize\.css$/g,
-                cssProcessor: require('cssnano'),
-                cssProcessorPluginOptions: {
-                    preset: ['default', { discardComments: { removeAll: true } }],
-                },
-                canPrint: true
-            }),
         ],
         optimization: {
             minimize: true,
             minimizer: [
-                new TerserPlugin({
-                    extractComments: false,
-                    terserOptions: {
-                        output: {
-                            comments: false
-                        },
-                        compress: {
-                            drop_console: true
-                        }
-                    }
-                }),
-                new OptimizeCssAssetsPlugin({})
-            ]
+                // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+                // `...`,
+                new CssMinimizerPlugin(),
+              ],
+            
         },
         externals: {
             'jsdom': 'window',
