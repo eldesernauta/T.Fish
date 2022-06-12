@@ -10,7 +10,6 @@
   }
 }
 
-
 .App {
   background: #201218;
   height: 100vh;
@@ -48,9 +47,10 @@
           background-size: cover;
           background-position: center center;
           align-items: stretch;
-          
-          div{
+
+          div {
             margin: auto;
+            max-height: 100%;
           }
           .gallery {
             .inner {
@@ -68,21 +68,21 @@
                 object-position: center -120px;
                 border-radius: 5px;
                 background: #242424;
-                box-shadow: 5px 5px 10px #0e0e0e, -5px -5px 10px #D6D5A830;
+                box-shadow: 5px 5px 10px #0e0e0e, -5px -5px 10px #d6d5a830;
 
                 &:hover {
                   transform: scale(1.1);
                   cursor: pointer;
                 }
-                @include tablet(){
+                @include tablet() {
                   width: 100%;
                   height: 200px;
                   margin: 0;
                   object-position: center -40px;
                 }
               }
-              
-              @include tablet(){
+
+              @include tablet() {
                 padding: 1em;
               }
             }
@@ -97,25 +97,27 @@
               opacity: 0;
             }
           }
-          
-          h3{
-            color: #D6D5A8;
+
+          h3 {
+            color: #d6d5a8;
             font-size: 42px;
+            @include tablet() {
+              font-size: 32px;
+            }
           }
 
           & > h2 {
-            color: #D6D5A8;
+            color: #d6d5a8;
           }
-
-
         }
         &:nth-child(2) {
-          background: #D6D5A8;
+          background: #d6d5a8;
           background-image: url("./assets/inner_2.jpg");
           background-size: cover;
           background-position: center center;
-          div{
+          div {
             margin: auto;
+            max-height: 100%;
           }
           .gallery {
             .inner {
@@ -140,15 +142,15 @@
                   transform: scale(1.1);
                   cursor: pointer;
                 }
-                @include tablet(){
+                @include tablet() {
                   width: 100%;
                   height: 200px;
                   margin: 0;
                   object-position: center 0px;
                 }
               }
-              
-              @include tablet(){
+
+              @include tablet() {
                 padding: 1em;
                 flex-direction: column-reverse;
               }
@@ -165,26 +167,34 @@
             }
           }
 
-          h3{
+          h3 {
             color: #816797;
             font-size: 42px;
+            @include tablet() {
+              font-size: 32px;
+            }
           }
 
           & > h2 {
             color: #816797;
           }
-          @include tablet(){
-            background-position: -320px center;
+          @include tablet() {
+            background-position: -330px center;
+
+            &:hover {
+              background-position: center center;
+            }
           }
         }
+
         &:nth-child(3) {
           background: #816797;
           background-image: url("./assets/inner_3.jpg");
           background-size: cover;
           background-position: center center;
-          
-          div{
+          div {
             margin: auto;
+            max-height: 100%;
           }
 
           .gallery {
@@ -203,21 +213,21 @@
                 object-position: center -100px;
                 border-radius: 5px;
                 background: #242424;
-                box-shadow: 5px 5px 10px #0e0e0e, -5px -5px 10px #D6D5A830;
+                box-shadow: 5px 5px 10px #0e0e0e, -5px -5px 10px #d6d5a830;
 
                 &:hover {
                   transform: scale(1.1);
                   cursor: pointer;
                 }
-                @include tablet(){
+                @include tablet() {
                   width: 100%;
                   height: 200px;
                   margin: 0;
                   object-position: center 0px;
                 }
               }
-              
-              @include tablet(){
+
+              @include tablet() {
                 padding: 1em;
                 flex-direction: column;
               }
@@ -233,26 +243,34 @@
               opacity: 0;
             }
           }
-          
-          h3{
-            color: #D6D5A8;
+
+          h3 {
+            color: #d6d5a8;
             font-size: 42px;
+            @include tablet() {
+              font-size: 32px;
+            }
           }
 
           & > h2 {
-            color: #D6D5A8;
+            color: #d6d5a8;
           }
-          @include tablet(){
+          @include tablet() {
             background-position: -150px center;
+
+            &:hover {
+              background-position: center center;
+            }
           }
         }
         &:nth-child(4) {
-          background: #D6D5A8;
+          background: #d6d5a8;
           background-image: url("./assets/inner_4.jpg");
           background-size: cover;
           background-position: center center;
-          div{
+          div {
             margin: auto;
+            max-height: 100%;
           }
           .gallery {
             .inner {
@@ -276,15 +294,15 @@
                   transform: scale(1.1);
                   cursor: pointer;
                 }
-                @include tablet(){
+                @include tablet() {
                   width: 100%;
                   height: 200px;
                   margin: 0;
                   object-position: center 0px;
                 }
               }
-              
-              @include tablet(){
+
+              @include tablet() {
                 padding: 1em;
               }
             }
@@ -299,16 +317,19 @@
               opacity: 0;
             }
           }
-          
-          h3{
+
+          h3 {
             color: #816797;
             font-size: 42px;
+            @include tablet() {
+              font-size: 32px;
+            }
           }
 
           & > h2 {
             color: #816797;
           }
-          @include tablet(){
+          @include tablet() {
             background-position: -260px center;
           }
         }
@@ -322,8 +343,8 @@
           }
         }
 
-        h3{
-          margin: 1em auto 0
+        h3 {
+          margin: 1em auto 0;
         }
 
         & > h2 {
@@ -353,7 +374,6 @@
           }
         }
       }
-
     }
     &:first-child {
       position: fixed;
@@ -368,7 +388,34 @@
 
       & > h1 {
         font-size: 52px;
-        color: #D6D5A8;
+        color: #d6d5a8;
+      }
+
+      & > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+
+        li {
+          font-size: 21px;
+          color: #d6d5a8;
+
+          & > a {
+            color: #d6d5a8;
+            text-decoration: none;
+
+            &::after {
+              content: "";
+            }
+            &:hover {
+              cursor: pointer;
+              color: #816797;
+            }
+          }
+
+        }
       }
     }
   }

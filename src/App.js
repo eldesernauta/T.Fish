@@ -46,6 +46,11 @@ class App extends Component {
         <div>
           <h1>T . F i s h</h1>
           <h4>From a 4th April</h4>
+          <ul className='social-media'>
+            <li><a href='https://eldesernauta.com' target='_blank' rel='noreferrer'><i className='fa fa-globe'></i></a></li>
+            <li><a href='https://linktr.ee/eldesernauta' target='_blank' rel='noreferrer'><i className='fa fa-link'></i></a></li>
+            <li><a href='https://instagram.com/eldesernauta' target='_blank' rel='noreferrer'><i className='fa fa-instagram'></i></a></li>
+          </ul>
         </div>
         <div>
           <article>
@@ -85,7 +90,7 @@ class App extends Component {
 
               <div className="gallery">
                 <div className="inner">
-                  <p>Bienaventurado el náufrago que, una vez entendió que cada centímetro cúbico en millas a su alrededor podían ser su fin, se encontró derrotado, cerró los ojos para contemplar y adoptó la calma.
+                  <p>Bienaventurado el náufrago que, una vez entendió que cada centímetro cúbico en millas a su alrededor podían significar su fin, se encontró derrotado, cerró los ojos para contemplar y adoptó la calma.
                   </p>
                   <img src={inner_3} alt='left portrait' onClick={() => this.openLightboxOnSlide(3)}/>
                 </div>
