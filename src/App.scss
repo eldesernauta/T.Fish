@@ -193,6 +193,13 @@ h6 {
           background-position: center center;
         }
       }
+      @include for-phone-only {
+        background-position: -100px center;
+
+        &:hover {
+          background-position: -center center;
+        }
+      }
     }
 
     &:nth-child(2) {
@@ -250,6 +257,13 @@ h6 {
 
         &:hover {
           background-position: center center;
+        }
+      }
+      @include for-phone-only {
+        background-position: -230px center;
+
+        &:hover {
+          background-position: -center center;
         }
       }
     }
