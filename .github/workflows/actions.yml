@@ -19,6 +19,7 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm install
+        npm install optimize-css-assets-webpack-plugin --force
         npm run build
     
     - name: 📂 Sync files
