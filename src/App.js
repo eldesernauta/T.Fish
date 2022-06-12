@@ -7,10 +7,6 @@ import inner_3 from './assets/inner_3.jpg'
 import inner_4 from './assets/inner_4.jpg'
 import photo_2 from './assets/photo_2.jpg'
 
-function delayClick(id){
-  document.querySelector("img").disabled = true;
-  setTimeout(function(){document.querySelector("img").disabled = false;},5000);
-}
 
 class App extends Component {
 
@@ -63,9 +59,9 @@ class App extends Component {
               <h3>Momento I</h3>
               <div className="gallery">
                 <div className="inner">
-                  <p>Hago largos viajes por carretera cumpliendo mi condena de ser nauta, uno que además de navegar este desierto que se lleva por vida, surque también el espacio interior vasto que cabe en cada compañía, en momentos perennes o en lugares donde morir lograr parecer una experiencia celestial.
+                  <p>Hago largos viajes por carretera cumpliendo mi condena de ser nauta, uno que además de navegar este desierto que se lleva por vida, surque también el espacio interior vasto que cabe en cada compañía, en momentos perennes o en lugares donde morir logre parecer una experiencia celestial.
                   </p>
-                  <img src={inner_1} alt='front portrait' onClick={() => this.openLightboxOnSlide(1)} />
+                  <img className='thumbnail' src={inner_1} alt='front portrait' onClick={() => this.openLightboxOnSlide(1)} />
 
                 </div>
               </div>
@@ -78,9 +74,9 @@ class App extends Component {
 
               <div className="gallery">
                 <div className="inner">
-                  <img src={photo_2} alt='right portrait' onClick={() => this.openLightboxOnSlide(2)} />
+                  <img className='thumbnail' src={photo_2} alt='right portrait' onClick={() => this.openLightboxOnSlide(2)} />
 
-                  <p>Hago largos viajes a través de la meditación para visitar lugares que me enseñen a apreciar las cosas que no puedo dominar. Ayer, desde la distancia, visité su océano lleno de flores: por fin conocí el mar y, por voluntad propia, escogí el naufragio y las espinas...
+                  <p>Hago largos viajes a través de la meditación para visitar lugares que me enseñen a apreciar las cosas que no puedo dominar. Ayer, desde la distancia, visité su océano lleno de flores: por fin conocí el mar y, por voluntad propia, escogí el naufragio y las espinas.
                   </p>
 
                 </div>
@@ -96,7 +92,7 @@ class App extends Component {
                 <div className="inner">
                   <p>Bienaventurado el náufrago que, una vez entendió que cada centímetro cúbico en millas a su alrededor podían significar su fin, se encontró derrotado, cerró los ojos para contemplar y adoptó la calma.
                   </p>
-                  <img src={inner_3} alt='left portrait' onClick={() => this.openLightboxOnSlide(3)} />
+                  <img className='thumbnail' src={inner_3} alt='left portrait' onClick={() => this.openLightboxOnSlide(3)} />
                 </div>
               </div>
             </div>
@@ -110,7 +106,7 @@ class App extends Component {
                 <div className="inner">
                   <p>Hago largos viajes por su mar y prefiero hundirme.
                   </p>
-                  <img src={inner_4} alt='back portrait' onClick={() => this.openLightboxOnSlide(4)} />
+                  <img className='thumbnail' src={inner_4} alt='back portrait' onClick={() => this.openLightboxOnSlide(4)} />
 
                 </div>
               </div>
