@@ -120,5 +120,10 @@ module.exports = (env, argv) => {
             'react/lib/ReactContext': 'window',
             'react/addons': true,
         },
+        performance: {
+            hints: false,
+            maxEntrypointSize: 512000,
+            maxAssetSize: 512000
+        }
     }
 };
