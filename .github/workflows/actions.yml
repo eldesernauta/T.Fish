@@ -19,7 +19,6 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm install
-        npm install optimize-css-assets-webpack-plugin --force
         npm run build
     
     - name: 📂 Sync files
@@ -28,3 +27,5 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        dangerous-clean-slate: true
+        local-dir: ./build/
