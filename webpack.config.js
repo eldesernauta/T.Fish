@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
         entry: './index.js',
         output: {
             filename: isProduction
-                ? './src/bundle.[contenthash].js'
+                ? './src/bundle.js'
                 : './src/bundle.js',
             path: path.resolve(__dirname, "build"),
             publicPath: '/'
@@ -82,8 +82,8 @@ module.exports = (env, argv) => {
                 manifest: "./public/manifest.json"
             }),
             new MiniCssExtractPlugin({
-                filename: 'src/styles/[name].css',
-                chunkFilename: 'src/styles/[id].css'
+                filename: 'src/[name].css',
+                chunkFilename: 'src/[id].css'
             }),
         ],
         optimization: {
