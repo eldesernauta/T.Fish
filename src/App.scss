@@ -72,11 +72,11 @@ h6 {
     color: #fff;
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0 0;
     z-index: 2;
 
     h1 {
-      font-size: 52px;
+      font-size: 48px;
       color: #816797;
 
       @include for-tablet-landscape-up() {
@@ -91,9 +91,7 @@ h6 {
     }
 
     h4 {
-      @include for-phone-only {
-        font-size: 14px;
-      }
+      font-size: 14px;
     }
 
     .social-media {
