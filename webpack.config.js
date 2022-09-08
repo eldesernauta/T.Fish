@@ -12,8 +12,8 @@ module.exports = (env, argv) => {
         entry: './index.js',
         output: {
             filename: isProduction
-                ? './src/bundle.js'
-                : './src/bundle.js',
+                ? 'bundle.js'
+                : 'bundle.js',
             path: path.resolve(__dirname, "build"),
             publicPath: '/'
         },
@@ -33,7 +33,10 @@ module.exports = (env, argv) => {
                     test: /\.(js|jsx)$/,
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-react']
+                        presets: [
+                            "@babel/preset-env",
+                            ["@babel/preset-react", { "runtime": "automatic" }]
+                        ]
                     }
                 },
 
@@ -41,7 +44,7 @@ module.exports = (env, argv) => {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: './src/fonts/[name].[hash].[ext]',
+                        filename: '[name].[ext]',
                     }
 
                 },
@@ -71,6 +74,7 @@ module.exports = (env, argv) => {
                 {
                     test: /\.(jpe?g|png|ico|gif|svg)(\?[a-z0-9=.]+)?$/,
                     type: 'asset/resource',
+
                 },
 
             ],
@@ -82,18 +86,16 @@ module.exports = (env, argv) => {
                 manifest: "./public/manifest.json"
             }),
             new MiniCssExtractPlugin({
-                filename: 'src/[name].css',
-                chunkFilename: 'src/[id].css'
+                filename: '[name].css',
+                chunkFilename: '[id].css'
             }),
         ],
         optimization: {
             minimize: true,
             minimizer: [
-                // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-                // `...`,
                 new CssMinimizerPlugin(),
-              ],
-            
+            ],
+
         },
         externals: {
             'jsdom': 'window',
