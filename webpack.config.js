@@ -12,8 +12,8 @@ module.exports = (env, argv) => {
         entry: './index.js',
         output: {
             filename: isProduction
-                ? 'bundle.js'
-                : 'bundle.js',
+                ? 'tfish/bundle.js'
+                : 'tfish/bundle.js',
             path: path.resolve(__dirname, "build"),
             publicPath: '/'
         },
@@ -86,8 +86,8 @@ module.exports = (env, argv) => {
                 manifest: "./public/manifest.json"
             }),
             new MiniCssExtractPlugin({
-                filename: '[name].css',
-                chunkFilename: '[id].css'
+                filename: 'tfish/[name].css',
+                chunkFilename: 'tfish/[id].css'
             }),
         ],
         optimization: {
