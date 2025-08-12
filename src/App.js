@@ -45,8 +45,9 @@ class App extends Component {
       <div className="App" >
         <div className="banner">
           <h1>T . F i s h</h1>
-          <h4>From a 4th April</h4>
+          <h4>Sobre un 4 de abril</h4>
           <ul className='social-media'>
+            <li><a href='https://ph.eldesernauta.com' target='_blank' rel='noreferrer'><i className='fa fa-film'></i></a></li>
             <li><a href='https://eldesernauta.com' target='_blank' rel='noreferrer'><i className='fa fa-globe'></i></a></li>
             <li><a href='https://linktr.ee/eldesernauta' target='_blank' rel='noreferrer'><i className='fa fa-link'></i></a></li>
             <li><a href='https://instagram.com/eldesernauta' target='_blank' rel='noreferrer'><i className='fa fa-instagram'></i></a></li>
